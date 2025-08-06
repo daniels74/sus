@@ -36,10 +36,11 @@ customOptions: OwlOptions = {
   }
 
   slidesArray = [
-    { id: '1', src: 'assets/1.jpg', alt: 'Slide 1', title: 'Slide 1' },
-    { id: '2', src: 'assets/2.jpg', alt: 'Slide 2', title: 'Slide 2' },
-    { id: '3', src: 'assets/3.jpg', alt: 'Slide 3', title: 'Slide 3' },
+    { id: '1', src: 'assets/1.webp', alt: 'Slide 1', title: 'Slide 1' },
+    { id: '2', src: 'assets/2.png', alt: 'Slide 2', title: 'Slide 2' },
+    { id: '3', src: 'assets/3.png', alt: 'Slide 3', title: 'Slide 3' },
     { id: '4', src: 'assets/4.jpg', alt: 'Slide 4', title: 'Slide 4' },
-    { id: '5', src: 'assets/why.png', alt: 'Slide 5', title: 'Slide 5' },
+    { id: '5', src: 'assets/5.webp', alt: 'Slide 5', title: 'Slide 5' },
+    { id: '6', src: 'assets/icon.png', alt: 'Slide 6', title: 'Slide 6' },
   ];
 }
