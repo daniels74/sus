@@ -47,7 +47,7 @@
   color: #ffe8b0;
   // text-shadow: 0 0 6px rgba(255, 232, 176, 0.6),
   //   0 0 12px rgba(255, 232, 176, 0.4), 0 0 20px rgba(255, 232, 176, 0.3);
-   text-shadow: 0 0 4px #FFE8B0, 0 0 10px #FFE8B0;
+  text-shadow: 0 0 4px #ffe8b0, 0 0 10px #ffe8b0;
 }
 
 .navbar-outer {
@@ -81,4 +81,29 @@
   margin: 0; /* remove default margin */
   background: none; /* remove default background */
   border: none; /* remove default border */
+}
+
+.fab-container {
+  // position: fixed;
+  // bottom: 2rem;
+  // right: 2rem;
+  // z-index: 1000;
+  text-decoration: none;
+}
+
+.fab-container a {
+  text-decoration: none; 
+}
+
+.fab-button {
+  background-color: #f7e7ce; /* soft gold */
+  color: black;
+  border-radius: 1rem;
+}
+
+::ng-deep .mat-menu-panel {
+  background-color: #f7e7ce; /* soft gold background */
+  color: black; /* text color */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #caa66b; /* optional glow effect */
 }

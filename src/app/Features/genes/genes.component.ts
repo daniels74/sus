@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './genes.component.scss'
 })
 export class genesComponent {
-
+  smallView = window.innerWidth < 700 ? true : false;
 }

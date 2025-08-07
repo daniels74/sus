@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 // @import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
 // @import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+@use '@angular/material' as mat;
 
 * {
   box-sizing: border-box;
@@ -9,6 +10,12 @@
   font-family: "Emilys Candy", serif;
   font-weight: 400;
   font-style: normal;
+
+   @include mat.menu-overrides((
+    container-color: #f7e7ce, // soft gold
+    item-label-text-color: black,
+    item-icon-color: rgb(125, 178, 234),
+  ));
 }
 
 body::before {

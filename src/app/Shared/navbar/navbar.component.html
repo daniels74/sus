@@ -4,9 +4,37 @@
     <h1>Genes</h1>
   </a>
   <nav class="navbar-outer">
-    <ul class="navbar-inner remove-link-style">
+    <ul *ngIf="!smallView" class="navbar-inner remove-link-style">
       <li><a routerLink="/" routerLinkActive="active-link">Home</a></li>
       <li><a routerLink="why" routerLinkActive="active-link">Genes</a></li>
     </ul>
+    <div *ngIf="smallView" class="navbar-inner">
+      <div class="fab-container">
+        <button
+          mat-fab
+          [matMenuTriggerFor]="menu"
+          aria-label="Floating menu"
+          class="fab-button"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/" routerLinkActive="active-link">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </button>
+
+          <button mat-menu-item routerLink="why" routerLinkActive="active-link">
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+          </button>
+          <!-- <button mat-menu-item>
+            <mat-icon>contact_mail</mat-icon>
+            <span>Contact</span>
+          </button> -->
+        </mat-menu>
+      </div>
+    </div>
   </nav>
 </div>

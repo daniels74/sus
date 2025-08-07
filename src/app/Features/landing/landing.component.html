@@ -1,9 +1,9 @@
-<div class="landing-superior">
-  <div class="socials">
-    <!-- <a class="social-link" href="">
+<!-- <a class="social-link" href="">
       <img class="x-img" src="assets/x.png" alt="">
       <h6>X-OfficIal</h6>
     </a> -->
+<div class="landing-superior">
+  <div class="socials">
     <a class="social-link" href="https://x.com/i/communities/1950249154950942873">
       <img class="x-img" src="assets/communities.png" alt="">
       <h6>X-Communities</h6>
@@ -18,7 +18,8 @@
     <div class="title-container">
       <h1>$GENES</h1>
       <h2>sydney sweeney has good genes</h2>
-      <h3>ELbhnFtpKFmFH9B4Z27ihAviF9eEKe82Nffv2Gqsbonk</h3>
+      <h3 *ngIf="!smallView">ELbhnFtpKFmFH9B4Z27ihAviF9eEKe82Nffv2Gqsbonk</h3>
+      <h6 *ngIf="smallView">ELbhnFtpKFmFH9B4Z27ihAviF9eEKe82Nffv2Gqsbonk</h6>
     </div>
   </div>
   <div class="lower-section">
