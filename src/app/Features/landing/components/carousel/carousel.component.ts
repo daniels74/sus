@@ -42,5 +42,9 @@ customOptions: OwlOptions = {
     { id: '4', src: 'assets/4.jpg', alt: 'Slide 4', title: 'Slide 4' },
     { id: '5', src: 'assets/5.webp', alt: 'Slide 5', title: 'Slide 5' },
     { id: '6', src: 'assets/icon.png', alt: 'Slide 6', title: 'Slide 6' },
+    { id: '7', src: 'assets/7.jpeg', alt: 'Slide 7', title: 'Slide 7' },
+    { id: '8', src: 'assets/8.jpeg', alt: 'Slide 8', title: 'Slide 8' },
+    { id: '9', src: 'assets/9.jpeg', alt: 'Slide 9', title: 'Slide 9' },
+    { id: '10', src: 'assets/10.jpeg', alt: 'Slide 10', title: 'Slide 10' },
   ];
 }
