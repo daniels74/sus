@@ -1,7 +1,14 @@
+:root {
+  --carousel-element-size: 10rem;
+  --cube-size: 6rem; /* change this to resize the cube */
+  --face-depth: calc(var(--cube-size) / 2);
+  --border-radius: 20%;
+}
+
 /* ───── Layout & Containers ───── */
 .carousel-element {
-  height: 8rem;
-  width: 8rem;
+  height: var(--carousel-element-size);
+  width: var(--carousel-element-size);
   position: relative;
   border-radius: 50%;
   border-style: none;
@@ -10,77 +17,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.carousel-cell {
-  width: 250px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.container {
-  width: 6rem;
-  height: 6rem;
-  margin: 6rem;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ───── Images ───── */
-.img-container {
-  border-radius: 20%;
-  height: 6rem;
-  width: 6rem;
-  position: relative;
-  // z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.img-ele {
-  border-radius: 20%;
-  position: absolute;
-  height: 6rem;
-  width: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
-    0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
-  animation: white-glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes white-glow {
-  from {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
-      0 0 20px rgba(255, 255, 255, 0.4);
-  }
-  to {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9),
-      0 0 40px rgba(255, 255, 255, 0.7), 0 0 60px rgba(255, 255, 255, 0.6);
-  }
+  perspective: 1000px;
+  background-color: red;
 }
 
 /* ───── 3D Cube ───── */
 .cube {
   position: relative;
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   transform-style: preserve-3d;
-  animation: turn 20s linear infinite;
+  animation: turn 15s linear infinite;
   border-radius: 20%;
   display: flex;
   flex-direction: column;
@@ -89,8 +36,8 @@
 }
 
 .face {
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   border: 2px solid black;
   position: absolute;
   opacity: 0.8;
@@ -102,70 +49,32 @@
   border-radius: 20%;
 }
 
-/* ───── Face Positions ───── */
+/* ───── Face positions ───── */
 .front {
-  transform: translateZ(75px);
+  transform: translateZ(4rem);
 }
 .back {
-  transform: translateZ(-75px) rotateY(180deg);
+  transform: rotateY(180deg) translateZ(4rem);
 }
 .left {
-  transform: translateX(-75px) rotateY(-90deg);
+  transform: rotateY(-90deg) translateZ(4rem);
 }
 .right {
-  transform: translateX(75px) rotateY(90deg);
+  transform: rotateY(90deg) translateZ(4rem);
 }
 .top {
-  transform: translateY(-75px) rotateX(90deg);
+  transform: rotateX(90deg) translateZ(4rem);
 }
 .bottom {
-  transform: translateY(75px) rotateX(-90deg);
-}
-
-/* ───── Crypto Info ───── */
-.crypto-info {
-  position: absolute;
-  height: 50%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25%;
+  transform: rotateX(-90deg) translateZ(4rem);
 }
 
 /* ───── Animations ───── */
 @keyframes turn {
-  0% {
+  from {
     transform: rotateY(0deg);
   }
-  4% {
-    transform: rotateY(0deg);
-  }
-
-  /* Rotate slowly to next face */
-  25% {
-    transform: rotateY(90deg);
-  }
-  29% {
-    transform: rotateY(90deg);
-  }
-
-  50% {
-    transform: rotateY(180deg);
-  }
-  54% {
-    transform: rotateY(180deg);
-  }
-
-  75% {
-    transform: rotateY(270deg);
-  }
-  79% {
-    transform: rotateY(270deg);
-  }
-
-  100% {
+  to {
     transform: rotateY(360deg);
   }
 }
@@ -176,6 +85,95 @@
     transform: rotate3d(1, 1, 0, 45deg);
   }
 }
+
+/* Cube container with floating halo */
+.img-container {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* Soft trailing glow behind cube */
+.img-container::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+  filter: blur(20px);
+  z-index: -1; /* behind the cube */
+  animation: halo-pulse 3s ease-in-out infinite alternate;
+}
+
+/* Cube itself */
+.img-ele {
+  border-radius: 20%;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cube faces with ambient glow */
+.cube .face {
+  border-radius: 20%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    2px 2px 5px rgba(0,0,0,0.1),
+    0 0 12px rgba(255,255,255,0.25),
+    0 0 25px rgba(255,255,255,0.15);
+  animation: face-glow 3s ease-in-out infinite alternate;
+}
+
+/* Offset animations for each face for dynamic effect */
+.cube .front  { animation-delay: 0s; }
+.cube .back   { animation-delay: 0.5s; }
+.cube .left   { animation-delay: 1s; }
+.cube .right  { animation-delay: 1.5s; }
+.cube .top    { animation-delay: 2s; }
+.cube .bottom { animation-delay: 2.5s; }
+
+/* Glow pulse animation for faces */
+@keyframes face-glow {
+  from {
+    box-shadow: 
+      2px 2px 5px rgba(0,0,0,0.1),
+      0 0 10px rgba(255,255,255,0.2),
+      0 0 20px rgba(255,255,255,0.1);
+  }
+  to {
+    box-shadow: 
+      2px 2px 5px rgba(0,0,0,0.1),
+      0 0 18px rgba(255,255,255,0.35),
+      0 0 35px rgba(255,255,255,0.2);
+  }
+}
+
+/* Halo pulse behind the cube */
+@keyframes halo-pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+
 
 /* ───── Material Theme Glow ───── */
 .glow {

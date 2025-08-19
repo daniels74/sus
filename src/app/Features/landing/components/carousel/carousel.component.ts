@@ -1,44 +1,54 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
-import { CarouselElementComponent } from "../carousel-element/carousel-element.component";
+import { CarouselElementComponent } from '../carousel-element/carousel-element.component';
 
 @Component({
   selector: 'app-carousel',
   imports: [CarouselModule, CommonModule, CarouselElementComponent],
   templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss'
+  styleUrl: './carousel.component.scss',
 })
 export class CarouselComponent {
-customOptions: OwlOptions = {
+  customOptions: OwlOptions = {
+    loop: true,
     autoplay: true,
-    autoplaySpeed: 1200,
+    autoplaySpeed: 500,
     fluidSpeed: true,
     smartSpeed: 200,
     autoplayHoverPause: true,
-    loop: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
     dots: false,
-    navSpeed: 700,
+    nav: true,
+    navSpeed: 500,
     navText: ['', ''],
+    // loop: true,
+    // autoplay: true,
+    // autoplayTimeout: 0, // no delay between transitions
+    // autoplaySpeed: 2000, // controls how smooth/slow the movement is
+    // autoplayHoverPause: false,
+    // dots: false,
+    // nav: true,
+    // navSpeed: 700,
+    // slideTransition: 'linear', // important: makes it smooth
+    // smartSpeed: 200, // sync speed with autoplaySpeed
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       400: {
-        items: 2
+        items: 2,
       },
       740: {
-        items: 3
+        items: 3,
       },
       940: {
-        items: 4
-      }
+        items: 4,
+      },
     },
-    nav: true
-  }
+  };
 
   slidesArray = [
     { id: '1', src: 'assets/sus1.jpeg', alt: 'Slide 1', title: 'Slide 1' },
