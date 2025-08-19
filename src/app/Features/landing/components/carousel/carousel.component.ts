@@ -1,20 +1,25 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { CarouselElementComponent } from "../carousel-element/carousel-element.component";
 
 @Component({
   selector: 'app-carousel',
-  imports: [CarouselModule, CommonModule],
+  imports: [CarouselModule, CommonModule, CarouselElementComponent],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss'
 })
 export class CarouselComponent {
 customOptions: OwlOptions = {
     autoplay: true,
+    autoplaySpeed: 1200,
+    fluidSpeed: true,
+    smartSpeed: 200,
+    autoplayHoverPause: true,
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
