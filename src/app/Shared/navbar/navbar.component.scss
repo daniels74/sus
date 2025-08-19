@@ -30,7 +30,6 @@
   margin: 0; /* remove default margin */
   background: none; /* remove default background */
   border: none; /* remove default border */
-  gap: 1rem;
   // background-color: red;
 }
 
@@ -39,15 +38,14 @@
   margin-left: 1rem;
   border-radius: 2rem;
   border-radius: 8rem;
-  background-color: red;
-  box-shadow: 0 0 10px 2px #f7e7ce;
+  box-shadow: 0 0 10px 2px #ceebf7;
 }
 
 .logo-outer > h1 {
-  color: #ffe8b0;
+  color: #000000;
   // text-shadow: 0 0 6px rgba(255, 232, 176, 0.6),
   //   0 0 12px rgba(255, 232, 176, 0.4), 0 0 20px rgba(255, 232, 176, 0.3);
-  text-shadow: 0 0 4px #ffe8b0, 0 0 10px #ffe8b0;
+  text-shadow: 0 0 4px #ceebf7, 0 0 10px #ceebf7;
 }
 
 .navbar-outer {

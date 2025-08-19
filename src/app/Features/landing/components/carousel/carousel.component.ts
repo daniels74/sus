@@ -36,15 +36,15 @@ customOptions: OwlOptions = {
   }
 
   slidesArray = [
-    { id: '1', src: 'assets/1.webp', alt: 'Slide 1', title: 'Slide 1' },
-    { id: '2', src: 'assets/2.png', alt: 'Slide 2', title: 'Slide 2' },
-    { id: '3', src: 'assets/3.png', alt: 'Slide 3', title: 'Slide 3' },
-    { id: '4', src: 'assets/4.jpg', alt: 'Slide 4', title: 'Slide 4' },
-    { id: '5', src: 'assets/5.webp', alt: 'Slide 5', title: 'Slide 5' },
-    { id: '6', src: 'assets/icon.png', alt: 'Slide 6', title: 'Slide 6' },
-    { id: '7', src: 'assets/7.jpeg', alt: 'Slide 7', title: 'Slide 7' },
-    { id: '8', src: 'assets/8.jpeg', alt: 'Slide 8', title: 'Slide 8' },
-    { id: '9', src: 'assets/9.jpeg', alt: 'Slide 9', title: 'Slide 9' },
-    { id: '10', src: 'assets/10.jpeg', alt: 'Slide 10', title: 'Slide 10' },
+    { id: '1', src: 'assets/sus1.jpeg', alt: 'Slide 1', title: 'Slide 1' },
+    { id: '2', src: 'assets/sus2.jpeg', alt: 'Slide 2', title: 'Slide 2' },
+    { id: '3', src: 'assets/sus3.jpeg', alt: 'Slide 3', title: 'Slide 3' },
+    { id: '4', src: 'assets/sus4.jpeg', alt: 'Slide 4', title: 'Slide 4' },
+    { id: '5', src: 'assets/sus5.jpeg', alt: 'Slide 5', title: 'Slide 5' },
+    { id: '6', src: 'assets/sus6.png', alt: 'Slide 6', title: 'Slide 6' },
+    { id: '7', src: 'assets/sus7.jpeg', alt: 'Slide 7', title: 'Slide 7' },
+    { id: '8', src: 'assets/sus8.jpeg', alt: 'Slide 8', title: 'Slide 8' },
+    { id: '9', src: 'assets/sus9.png', alt: 'Slide 9', title: 'Slide 9' },
+    { id: '10', src: 'assets/sus10.png', alt: 'Slide 10', title: 'Slide 10' },
   ];
 }

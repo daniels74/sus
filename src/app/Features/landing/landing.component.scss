@@ -25,11 +25,11 @@
 .blur-container {
   position: absolute;
   top: 0vh;
-  width: 85%;
+  width: 100%;
   height: .5px;
   border-radius: 1rem;
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 10px 2px #f7e7ce;
+  box-shadow: 0 0 10px 2px #ffffff;
   z-index: 0;
 }
 
@@ -84,7 +84,7 @@
   height: 2rem;
   width: auto;
   border-radius: 0.5rem;
-  box-shadow: 0 0 10px 2px #f7e7ce;
+  box-shadow: 0 0 10px 2px #ffffff;
 }
 
 // ?----------------------------------------?  Desktop:
@@ -109,7 +109,7 @@
 
   .blur-container {
     position: absolute;
-    width: 70%;
+    width: 100%;
     height: .5px;
   }
   .title-container {
