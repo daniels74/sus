@@ -13,10 +13,10 @@
 
   @include mat.menu-overrides(
     (
-      container-color: #f7e7ce,
+      container-color: #ffffff,
       // soft gold
       item-label-text-color: black,
-      item-icon-color: rgb(125, 178, 234),
+      item-icon-color: rgb(14, 69, 141)
     )
   );
 }
